@@ -1,0 +1,41 @@
+{
+    "name": "vipertecpro/vimeo-api",
+    "description": "Official PHP library for the Vimeo API.",
+    "homepage": "https://github.com/vimeo/vimeo.php",
+    "keywords": ["vimeo", "video"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Vipul Walia"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.2.5",
+        "ext-curl": "*",
+        "ext-json":"*",
+        "php-coveralls/php-coveralls": "^2.2",
+        "ankitpokhrel/tus-php": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vimeo\\": "src/Vimeo"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vimeo\\": "tests/Vimeo"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4",
+        "vimeo/psalm": "^2.0"
+    },
+    "scripts": {
+        "coverage": "phpunit --coverage-html reports/",
+        "tests": [
+            "psalm",
+            "phpunit"
+        ]
+    }
+}
